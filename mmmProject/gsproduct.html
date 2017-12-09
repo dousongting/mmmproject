@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no"> -->
+    <!-- 视口 -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- rem.js  要在最开始引用 -->
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/gsproduct.css">
+    <title>慢慢买App-凑单品页</title>
+</head>
+
+<body>
+    <!-- 首先第一步 要把rem.js 中的图片大小改成750 -->
+    <!-- 头部 -->
+    <header class="mmm-header" id="top">
+        <div class="logo">
+            <a href="javascript:history.go(-1)" title='慢慢买'>
+                <img src="images/箭头.png" alt="">
+            </a>
+        </div>
+        <h4>凑单品</h4>
+        <div class="appdown">
+            <a href="javascript:;" title="手机app下载">
+                <img src="images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <div class="selectnav clearfix">
+        <div class="hd clearfix">
+            <ul>
+                <li data-num="1">
+                    <a href="javascript:;">
+                        京东
+                        <i></i>
+                    </a>
+                </li>
+                <li data-num="2">
+                    <a href="javascript:;">
+                        华北
+                        <i></i>
+                    </a>
+                </li>
+                <li data-num="3">
+                    <a href="javascript:;">
+                        全部商品
+                        <i></i>
+                    </a>
+                </li>
+            </ul>
+            <div class="search">
+            </div>
+        </div>
+        <div class="shop">
+            <ul>
+                <!-- 挖个坑 -->
+                <!-- <li>
+                    <a href="javacscript:;">京东</a>
+                </li> -->
+
+            </ul>
+        </div>
+        <div class="area">
+            <ul>
+                <!-- 再挖一个坑 -->
+                <!-- <li>
+                    <a href="javascript:;">华东地区[江苏.山东等]</a>
+                </li> -->
+
+            </ul>
+        </div>
+        <div class="allPrice">
+            <ul>
+                <li>
+                    <a href="#">全部价格</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 商品列表 -->
+    <main class="recommend">
+        <ul class="clearfix">
+            <!-- 挖个坑 -->
+            <!-- <li data-productId="{{v.productId}}">
+                <a href="#">
+                    <div class="img">
+                        <img src="http://img10.360buyimg.com/n7/jfs/t577/85/103283769/55548/3ecfcbf8/5461b6e1N70e46439.jpg" alt="">
+                    </div>
+                    <div class="titles txt_cut">
+                        廿一客(21cake)专用餐具 1人份(不单独配送)
+                    </div>
+                    <div class="info clearfix">
+                        <div class="price">¥0.50</div>
+                        <div class="btn">去凑单</div>
+                    </div>
+                </a>
+            </li> -->
+        </ul>
+    </main>
+    <!-- 底部 -->
+    <footer class="footer">
+        <div class="top">
+            <a href="">登陆</a>
+            <a href="">注册</a>
+            <a href="#top">
+                <img src="http://www.zuyushop.com/wap/images/top.jpg" alt=""> 返回顶部
+            </a>
+        </div>
+        <div class="bottom">
+            <p>
+                <a href="#">手机App下载</a>
+                <a href="#">慢慢买手机版</a>
+                --掌上比价平台
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+</body>
+
+<!-- 商品列表模板引擎 -->
+<script type="text/html" id="tplshop">
+    {{each result as v i}}
+    <li data-shopid="{{v.shopId}}">
+        <a href="javacscript:;">{{v.shopName}}</a>
+    </li>
+    {{/each}}
+</script>
+
+<!-- 地区 -->
+<script type="text/html" id="tplarea">
+    {{each result as v i}}
+    <li data-areaid="{{v.areaId}}">
+        <a href="javascript:;">{{v.areaName}}</a>
+    </li>
+    {{/each}}
+</script>
+<!-- 产品模板 -->
+<script type="text/html" id="tplproduct">
+    {{each result as v i}}
+    <li data-shopid="v.shopId" data-areaid="v.areaId">
+        <a href="http://item.m.jd.com/ware/view.action?wareId=1274360">
+            <div class="img">
+                <img src="{{v.productImg}}" alt="">
+            </div>
+            <div class="titles txt_cut">
+               {{v.productName}}
+            </div>
+            <div class="info clearfix">
+                <div class="price">{{v.productPrice}}</div>
+                <div class="btn">去凑单</div>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/artTemplate/template.js"></script>
+<script src="js/common.js"></script>
+<script src="js/gsproduct.js"></script>
+
+</html>

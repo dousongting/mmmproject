@@ -1,0 +1,63 @@
+html,
+body {
+  background-color: #fff;
+}
+.mmm-header {
+  overflow: hidden;
+}
+.mmm-header .logo {
+  width: 1rem /* 40/40 */;
+  height: 2.4rem /* 96/40 */;
+  display: inline-block;
+}
+.mmm-header .logo a {
+  font-size: 1.7rem /* 68/40 */;
+  color: #fff;
+}
+.mmm-header h4 {
+  color: #ffffff;
+  font-size: 22px;
+  height: 2.4rem /* 96/40 */;
+  line-height: 2.4rem /* 96/40 */;
+  margin: 0;
+  text-align: center;
+}
+.recommend {
+  background-color: #fff;
+}
+.recommend ul li {
+  float: left;
+  width: 50%;
+  height: 13.2rem /* 528/40 */;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding-top: 1rem /* 40/40 */;
+  padding-left: 0.85rem /* 34/40 */;
+}
+.recommend ul li a .img {
+  width: 7.05rem /* 282/40 */;
+  height: 7.125rem /* 285/40 */;
+}
+.recommend ul li a .img img {
+  width: 7.05rem /* 282/40 */;
+  height: 7.125rem /* 285/40 */;
+}
+.recommend ul li .titles {
+  margin-top: 0.5rem /* 20/40 */;
+  font-size: 0.75rem /* 30/40 */;
+  font-weight: 700;
+  padding: 0 0.2rem /* 8/40 */;
+}
+.recommend ul li .price {
+  margin-top: 0.375rem /* 15/40 */;
+  padding-top: 0.25rem /* 10/40 */;
+  font-size: 0.75rem /* 30/40 */;
+  color: #ff6c00;
+}
+.recommend ul li .info {
+  font-size: 0.625rem /* 25/40 */;
+  color: #666;
+}
+footer {
+  margin-top: 2rem /* 80/40 */;
+}
